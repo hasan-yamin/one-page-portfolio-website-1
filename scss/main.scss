@@ -1,7 +1,19 @@
-// impoer global rules
+// // import global rules
 @import './layout/global_rules';
+// // global variables
+// @import './variables/vars';
+// @import './helpers/mixins';
+// @import './functions/functions';
+// @import './helpers/media-queries';
+@import './pages/header';
+@import './pages/home';
+@import './pages/about';
+@import './pages/services';
+@import './pages/numbers';
+@import './pages/projects';
+@import './pages/feedback';
 
-@import './variables/vars'; // global variable
-@import './helpers/mixins.scss';
-@import './functions/functions';
-@import './helpers/media-queries';
+.container {
+    margin: auto;
+
+}

@@ -6,13 +6,269 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <!-- my main css file -->
     <link rel="stylesheet" href="scss/main.css">
 </head>
 
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">HKY</div>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#home">Home</a> </li>
+                    <li><a href="#about">About</a> </li>
+                    <li><a href="#services">Services</a> </li>
+                    <li><a href="#projects">Portfolio</a> </li>
+                    <li><a href="#plans">Prices</a> </li>
+                    <li><a href="#blog-posts">Blog</a> </li>
+                    <li><a href="#">Pages</a> </li>
+                    <li><a href="#contact">Contact</a> </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <!-- main section -->
+    <section class="home" id="home">
+        <div class="container">
+            <div class="info">
+                <span>This is me</span>
+                <h3>HASAN YAMEEN</h3>
+                <p>You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost
+                    showing Scrooge some different futures</p>
+                <button type="button">Discover Now</button>
+            </div>
+            <div class="picture">
+                <img src="./imgs/home1.png" alt="personal picture">
+            </div>
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="picture">
+                <img src="./imgs/about1.png" alt="personal picture">
+            </div>
+            <div class="info">
+                <span>About me</span>
+                <h3>Personal Details</h3>
+                <p>Here, I focus on a range of items and features that we use in life without giving them a second
+                    thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco.</p>
+                <button type="button">view full details</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="title">
+                <h2>My Offered Services</h2>
+                <p>At about this time of year, some months after New Year’s resolutions have been made and kept, or made
+                    and neglected.</p>
+            </div>
+            <div class="service-cards">
+                <div class="card">
+                    <div class="logo"><i class="fa-solid fa-pizza-slice"></i></div>
+                    <h3 class="name"> Web Design</h3>
+                    <p class="desc">“It is not because things are difficult that we do not dare; it is because we do not
+                        dare that they are
+                        difficult.” </p>
+                </div>
+                <div class="card">
+                    <div class="logo"><i class="fa-solid fa-laptop"></i></div>
+                    <h3 class="name">
+                        Web Development</h3>
+                    <p class="desc">If you are an entrepreneur, you know that your success cannot depend on the opinions
+                        of others. Like the wind, opinions. </p>
+                </div>
+                <div class="card">
+                    <div class="logo"><i class="fa-solid fa-camera"></i></div>
+                    <h3 class="name">Photography</h3>
+                    <p class="desc">Do you want to be even more successful? Learn to love learning and growth. The more
+                        effort you put into improving your skills. </p>
+                </div>
+                <div class="card">
+                    <div class="logo"><i class="fa-regular fa-image"></i></div>
+                    <h3 class="name">
+                        Clipping Path</h3>
+                    <p class="desc">Hypnosis quit smoking methods maintain caused quite a stir in the medical world over
+                        the last two decades. There is a lot of argument. </p>
+                </div>
+                <div class="card">
+                    <div class="logo"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3 class="name">Apps Interface</h3>
+                    <p class="desc">Do you sometimes have the feeling that you’re running into the same obstacles over
+                        and over again? Many of my conflicts. </p>
+                </div>
+                <div class="card">
+                    <div class="logo"><i class="fa-solid fa-rocket"></i></div>
+                    <h3 class="name">Graphic Design</h3>
+                    <p class="desc">You’ve heard the expression, “Just believe it and it will come.” Well, technically,
+                        that is true, however, ‘believing’ is not just thinking that.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- numbers section -->
+    <section class="numbers" id="numbers">
+        <div class="container">
+            <div class="card">
+                <span>2536</span>
+                <p>Projects Completed</p>
+            </div>
+            <div class="card">
+                <span>6784</span>
+                <p>Happy Clients</p>
+            </div>
+            <div class="card">
+                <span>2239</span>
+                <p>Cups of Coffee</p>
+            </div>
+            <div class="card">
+                <span>444</span>
+                <p>Real Professionals</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="tit">
+                <h2>Our Latest Featured Projects</h2>
+                <p>Who are in extremely love with eco friendly system.</p>
+            </div>
+            <div class="filter">
+                <div id="myBtnContainer">
+                    <span class="active" data-tp="all"> all</span>
+                    <span data-tp="vector"> Vector</span>
+                    <span data-tp="agency"> Agency</span>
+                    <span data-tp="portal"> Portal</span>
+                    <span data-tp="raster"> Raster</span>
+                </div>
+            </div>
+            <div class="project-cards" id="project-cards">
+                <div class="card filterDiv vector ">
+                    <div class="pic"></div>
+                    <div class="title">
+                        <h3>2D Vinyl Design</h3>
+                        <span>vector</span>
+                    </div>
+                </div>
+                <div class="card filterDiv vector ">
+                    <div class="pic"></div>
+                    <div class="title">
+                        <h3>2D Vinyl Design</h3>
+                        <span>vector</span>
+                    </div>
+                </div>
+                <div class="card filterDiv agency ">
+                    <div class="pic"></div>
+                    <div class="title">
+                        <h3>Creative Poster Design</h3>
+                        <span>Agency</span>
+                    </div>
+                </div>
+                <div class="card filterDiv portal ">
+                    <div class="pic"></div>
+                    <div class="title">
+                        <h3>Embosed Logo Design</h3>
+                        <span>Portal</span>
+                    </div>
+                </div>
+                <div class="card filterDiv vector">
+                    <div class="pic"></div>
+                    <div class="title">
+                        <h3>3D Helmet Design</h3>
+                        <span>vector</span>
+                    </div>
+                </div>
+                <div class="card filterDiv raster">
+                    <div class="pic"></div>
+                    <div class="title">
+                        <h3>2D Vinyl Design</h3>
+                        <span>raster</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback  section -->
+    <section class="feedback " id="feedback">
+        <div class="container">
+            <div class="title">
+                <h2>Client’s Feedback About Me</h2>
+                <p>It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a
+                    person.</p>
+            </div>
+            <div class="feedback-cards">
+                <div class="card">
+                    <div class="pic"><img src="" alt=" "></div>
+                    <div class="disc">
+                        <p> Do you want to be even more successful? Learn to love learning and growth. The more effort
+                            you put into improving your skills, the bigger the payoff you.
+                            Harriet Maxwell </p>
+                        <h3> Harriet Maxwell</h3>
+                        <span>CEO at Google</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans  section -->
+    <section class="plans " id="plans">
+        <div class="container">
+
+        </div>
+    </section>
+
+    <!-- blog posts  section -->
+    <section class="blog-posts " id="blog-posts">
+        <div class="container">
+
+        </div>
+    </section>
+
+    <!-- last  section -->
+    <section class="last" id="last">
+        <div class="container">
+
+        </div>
+    </section>
+
+    <!-- contact  section -->
+    <section class="contact" id="contact">
+        <div class="container">
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
 
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
     <!-- my main js file -->
     <script src="dist/main.js"></script>
 </body>

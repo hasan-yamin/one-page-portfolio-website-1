@@ -1,0 +1,47 @@
+@import '../variables/vars';
+@import '../helpers/mixins';
+@import '../functions/functions';
+@import '../helpers/media-queries';
+
+header {
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // transform: translateX(50%);
+    z-index: 100;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+        .nav-bar {
+            ul {
+                display: inline-flex;
+
+                li {
+                    margin: 5px;
+                    font-size: 15px;
+
+                    @include breakpoint(xs) {
+                        margin: 3px;
+                        font-size: 12px;
+                    }
+                }
+
+
+
+            }
+        }
+
+    }
+}

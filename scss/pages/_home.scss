@@ -1,0 +1,90 @@
+@import '../variables/vars';
+@import '../helpers/mixins';
+@import '../functions/functions';
+@import '../helpers/media-queries';
+
+.home {
+    background-color: #F9F9FF;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+
+        @include breakpoint(sm) {
+            flex-direction: column;
+        }
+
+        @include breakpoint(xs) {
+            flex-direction: column;
+        }
+
+        .info {
+            margin-bottom: 50px;
+
+            span {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            h3 {
+                margin-top: 25px;
+                margin-bottom: 25px;
+                font-size: 50px;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                @include breakpoint(md) {
+                    font-size: 40px;
+                }
+
+                @include breakpoint(sm) {
+                    font-size: 30px;
+                }
+
+                @include breakpoint(xs) {
+                    font-size: 30px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                color: #888;
+                line-height: 30px;
+            }
+
+            button {
+                text-transform: uppercase;
+                padding: 10px 15px;
+                margin-top: 20px;
+                background: linear-gradient(270deg, rgba(99, 188, 252, 1) 0%, rgba(131, 145, 255, 1) 100%);
+                border: none;
+                color: #fff;
+                font-size: 15px;
+
+                &:hover {
+                    box-shadow: rgba(99, 188, 252, 1) 0px 20px 40px 0px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .picture {
+            width: 50%;
+            overflow: hidden;
+
+            @include breakpoint(md) {
+                width: 90%;
+            }
+
+            img {
+                width: 100%;
+            }
+
+        }
+    }
+}
