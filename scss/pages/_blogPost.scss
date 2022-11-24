@@ -1,0 +1,169 @@
+@import '../variables/vars';
+@import '../helpers/mixins';
+@import '../functions/functions';
+@import '../helpers/media-queries';
+
+.blog-posts {
+    background-color: #F9F9FF;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 100px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        padding-top: 50px;
+        min-height: 900px;
+
+        @include breakpoint(sm) {}
+
+        @include breakpoint(xs) {}
+
+        .title {
+            width: 100%;
+            text-align: center;
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 40px;
+                text-transform: capitalize;
+                color: #222222;
+
+            }
+
+            p {
+                width: 70%;
+                margin: auto;
+                font-size: 16px;
+                color: #888;
+                line-height: 25px;
+
+                @include breakpoint(sm) {
+                    width: 100%;
+                }
+
+                @include breakpoint(xs) {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .blog-post-cards {
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+
+                &:hover {
+                    cursor: pointer;
+
+                    .crd-title {
+                        color: #8490FF;
+                    }
+
+                    .pic {
+                        img {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+
+                .pic {
+                    width: 100%;
+                    height: 200px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        transition: transform 0.3s;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+
+                .img-nav {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid rgba(136, 136, 136, 0.421);
+                    padding: 10px 0;
+
+                    .avat {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .avator {
+                            width: 30px;
+                            height: 30px;
+                            overflow: hidden;
+                            margin-right: 10px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .name {
+                            color: #444;
+                            font-size: 15px;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    .inf {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .date {
+                            margin-right: 10px;
+                            color: rgba(68, 68, 68, 0.512);
+                            font-size: 15px;
+                        }
+
+                        .like {
+                            color: rgba(68, 68, 68, 0.512);
+                            font-size: 15px;
+                            margin-right: 10px;
+
+                        }
+
+                        .comments {
+                            color: rgba(68, 68, 68, 0.512);
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .crd-title {
+                    margin: 35px auto;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+
+                .desc {
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #888;
+                }
+            }
+        }
+
+
+
+    }
+}

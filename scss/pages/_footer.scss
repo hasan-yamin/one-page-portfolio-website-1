@@ -1,0 +1,145 @@
+@import '../variables/vars';
+@import '../helpers/mixins';
+@import '../functions/functions';
+@import '../helpers/media-queries';
+
+footer {
+    background-color: #04091E;
+    color: #fff;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        padding: 150px 0;
+
+        .cards {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5%;
+
+            @include breakpoint(xs) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @include breakpoint(sm) {
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .aboutme {
+                width: 40%;
+
+                @include breakpoint(xs) {
+                    width: 80%;
+                }
+
+                @include breakpoint(sm) {
+                    width: 80%;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    color: #888;
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin-top: 20px;
+                }
+
+            }
+
+            .Newsletter {
+                width: 40%;
+
+                @include breakpoint(xs) {
+                    margin-top: 20px;
+                    width: 80%;
+                }
+
+                @include breakpoint(sm) {
+                    margin-top: 20px;
+                    width: 80%;
+                }
+
+                h3 {
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    color: #888;
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                form {
+                    width: 100%;
+                    display: flex;
+
+                    input {
+                        width: 90%;
+                        height: 50px;
+                        border: none;
+                        padding: 20px;
+                        caret-color: #888;
+                        outline: none;
+                    }
+
+                    button {
+                        width: 10%;
+                        border: none;
+                        background-color: #8490FF;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .Followme {
+                width: 10%;
+
+                @include breakpoint(xs) {
+                    margin-top: 20px;
+                    width: 80%;
+                }
+
+                @include breakpoint(sm) {
+                    margin-top: 20px;
+                    width: 80%;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    color: #888;
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                .socials {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+
+
+    }
+}

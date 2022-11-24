@@ -1,0 +1,40 @@
+@import '../variables/vars';
+@import '../helpers/mixins';
+@import '../functions/functions';
+@import '../helpers/media-queries';
+
+.last {
+    background: linear-gradient(270deg, rgba(99, 188, 252, 1) 0%, rgba(131, 145, 255, 1) 100%);
+    // padding-top: 100px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        padding-top: 50px;
+        min-height: 200px;
+
+        .cards {
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            padding-bottom: 50px;
+
+            .card {
+                opacity: 0.5;
+                transition: 0.3s;
+                margin: auto;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+
+
+    }
+}

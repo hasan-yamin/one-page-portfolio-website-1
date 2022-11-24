@@ -1,0 +1,98 @@
+@import '../variables/vars';
+@import '../helpers/mixins';
+@import '../functions/functions';
+@import '../helpers/media-queries';
+
+.services {
+    background-color: #FFFFFF;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        // justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+
+        @include breakpoint(sm) {}
+
+        @include breakpoint(xs) {}
+
+        .title {
+            width: 100%;
+            text-align: center;
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 40px;
+                text-transform: capitalize;
+                color: #222222;
+
+            }
+
+            p {
+                width: 70%;
+                margin: auto;
+                font-size: 16px;
+                color: #888;
+                line-height: 25px;
+
+                @include breakpoint(sm) {
+                    width: 100%;
+                }
+
+                @include breakpoint(xs) {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+
+                .logo {
+                    font-size: 35px;
+                    color: #444;
+                }
+
+                .name {
+                    text-transform: capitalize;
+                    font-size: 22px;
+                    color: #222222;
+                }
+
+                .desc {
+                    text-align: center;
+                    color: #888;
+                    font-size: 16px;
+                    letter-spacing: 0.5px;
+                    line-height: 25px;
+
+                    @include breakpoint(sm) {
+                        width: 70%;
+                    }
+
+                    @include breakpoint(xs) {
+                        width: 70%;
+                    }
+
+                }
+            }
+        }
+
+
+
+    }
+}

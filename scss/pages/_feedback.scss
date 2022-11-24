@@ -1,0 +1,163 @@
+@import '../variables/vars';
+@import '../helpers/mixins';
+@import '../functions/functions';
+@import '../helpers/media-queries';
+
+.feedback {
+    background-color: #F9F9FF;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        // justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+
+        @include breakpoint(sm) {}
+
+        @include breakpoint(xs) {}
+
+        .title {
+            width: 100%;
+            text-align: center;
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 40px;
+                text-transform: capitalize;
+                color: #222222;
+
+            }
+
+            p {
+                width: 70%;
+                margin: auto;
+                font-size: 16px;
+                color: #888;
+                line-height: 25px;
+
+                @include breakpoint(sm) {
+                    width: 100%;
+                }
+
+                @include breakpoint(xs) {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .feedbacks {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+
+            @include breakpoint(xs) {
+                flex-direction: column;
+            }
+
+            @include breakpoint(sm) {
+                flex-direction: column;
+            }
+
+            @include breakpoint(md) {
+                flex-direction: column;
+            }
+
+            .feedback-cards {
+                display: flex;
+                gap: 25px;
+
+                @include breakpoint(xs) {
+                    flex-direction: column;
+                }
+
+                @include breakpoint(sm) {
+                    flex-direction: column;
+                } 
+                .card {
+                    display: flex;
+                    flex-direction: row;
+                    padding: 25px;
+                    background-color: #FFF;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    .pic {
+                        width: 150px;
+                        overflow: hidden;
+
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .disc {
+                        p {
+                            font-size: px;
+                            color: #888;
+                            line-height: 25px;
+                        }
+
+                        h3 {
+                            color: #222;
+                            line-height: 50px;
+
+                            &:hover {
+                                color: #8490FF;
+                            }
+
+                        }
+
+                        span {
+                            font-size: px;
+                            color: #888;
+                            line-height: 25px;
+
+                        }
+                    }
+                }
+            }
+
+            .arrows {
+                display: flex;
+                flex-direction: column;
+                @include breakpoint(xs) {
+                    flex-direction: row;
+                }
+                @include breakpoint(sm) {
+                    flex-direction: row;
+                }
+                @include breakpoint(md) {
+                    flex-direction: row;
+                }
+                .arrow {
+                    background-color: #FFF;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 5px;
+                    font-size: 15px;
+                    font-weight: small;
+                    transition: 0.3s;
+                   
+                    &:hover {
+                        cursor: pointer;
+                        background: linear-gradient(270deg, rgba(99, 188, 252, 1) 0%, rgba(131, 145, 255, 1) 100%);
+                    }
+                }
+            }
+        }
+    }
+}
