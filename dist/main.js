@@ -1,4 +1,25 @@
 "use strict";
+/// Header ///
+let headerBtns = document.querySelectorAll('#nav-bar ul li');
+headerBtns.forEach(btn => {
+    console.log(btn);
+    btn.addEventListener('click', function () {
+        // remove class active fromm last active
+        var current = document.querySelectorAll('#nav-bar ul li.active');
+        current[0].classList.remove('active');
+        // add class active to current btn
+        btn.classList.add('active');
+    });
+});
+/// End Header ///
+/// about me ///
+let showAboutDetails = document.getElementById('show-about-details');
+showAboutDetails.addEventListener('click', function () {
+    console.log('test');
+    let AboutDetails = document.getElementById('about-full-details');
+    AboutDetails.style.display = 'block';
+});
+/// End About me ///
 let btns = document.querySelectorAll('#myBtnContainer span');
 btns.forEach((btn) => {
     btn.addEventListener('click', function () {

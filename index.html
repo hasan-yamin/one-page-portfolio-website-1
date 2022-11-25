@@ -16,15 +16,15 @@
     <header class="header">
         <div class="container">
             <div class="logo">HKY</div>
-            <nav class="nav-bar">
+            <nav class="nav-bar" id="nav-bar">
                 <ul>
-                    <li><a href="#home">Home</a> </li>
+                    <li class="active"><a href="#home">Home</a> </li>
                     <li><a href="#about">About</a> </li>
                     <li><a href="#services">Services</a> </li>
                     <li><a href="#projects">Portfolio</a> </li>
                     <li><a href="#plans">Prices</a> </li>
                     <li><a href="#blog-posts">Blog</a> </li>
-                    <li><a href="#">Pages</a> </li>
+                    <!-- <li><a href="#">Pages</a> </li> -->
                     <li><a href="#contact">Contact</a> </li>
                 </ul>
 
@@ -50,17 +50,121 @@
     <!-- about section -->
     <section class="about" id="about">
         <div class="container">
-            <div class="picture">
-                <img src="./imgs/about1.png" alt="personal picture">
+            <div class="basics">
+                <div class="picture">
+                    <img src="./imgs/about1.png" alt="personal picture">
+                </div>
+                <div class="info">
+                    <span>About me</span>
+                    <h3>Personal Details</h3>
+                    <p>Here, I focus on a range of items and features that we use in life without giving them a second
+                        thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco.</p>
+                    <button type="button" id="show-about-details">view full details</button>
+                </div>
             </div>
-            <div class="info">
-                <span>About me</span>
-                <h3>Personal Details</h3>
-                <p>Here, I focus on a range of items and features that we use in life without giving them a second
-                    thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco.</p>
-                <button type="button">view full details</button>
+            <div class="full-details" id="about-full-details">
+                <p class="desc">It won’t be a bigger problem to find one video game lover in your neighbor. Since the
+                    introduction of Virtual Game, it has been achieving great heights so far as its popularity and
+                    technological advancement are concerned. The history of video game is as interesting as a fairy
+                    tale.</p>
+                <p class="desc"> The quality of today’s video game was not at all there when video game first
+                    conceptualized and played ever. During the formulative years, video games were created by using
+                    various interactive electronic devices with various display formats. The first ever video game was
+                    designed in 1947 by Thomas T. Goldsmith Jr. </p>
+                <div class="tools-expert">
+                    <h3>Tools Expertness</h3>
+                    <div class="level">
+                        <div class="skill">
+                            <h3>HTML <span>90%</span></h3>
+                            <div class="the-progress">
+                                <span style="width:90%"></span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>CSS <span>90%</span></h3>
+                            <div class="the-progress">
+                                <span style="width:90%"></span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>JS <span>85%</span></h3>
+                            <div class="the-progress">
+                                <span style="width:85%"></span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>Python <span>70%</span></h3>
+                            <div class="the-progress">
+                                <span style="width:70%"></span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>Typescript <span>70%</span></h3>
+                            <div class="the-progress">
+                                <span style="width:70%"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="qualifications">
+                    <h3>My Qualifications</h3>
+                    <p>Who are in extremely love with eco friendly system.</p>
+                    <div class="graph">
+                        <ul>
+                            <li>
+                                <div>
+                                    <h3>Masters in Graphics & Fine Arts</h3>
+                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
+                                    <span>11-2022</span>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <h3>Masters in Graphics & Fine Arts</h3>
+                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
+                                    <span>11-2022</span>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <h3>Masters in Graphics & Fine Arts</h3>
+                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
+                                    <span>11-2022</span>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <h3>Masters in Graphics & Fine Arts</h3>
+                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
+                                    <span>11-2022</span>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <h3>Masters in Graphics & Fine Arts</h3>
+                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
+                                    <span>11-2022</span>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <h3>Masters in Graphics & Fine Arts</h3>
+                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
+                                    <span>11-2022</span>
+                                </div>
+                                
+                            </li>
+                             
+                        </ul>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -157,42 +261,42 @@
                 </div>
             </div>
             <div class="project-cards" id="project-cards">
-                <div class="card filterDiv vector ">
+                <div class="card filterDiv vector show">
                     <div class="pic"></div>
                     <div class="title">
                         <h3>2D Vinyl Design</h3>
                         <span>vector</span>
                     </div>
                 </div>
-                <div class="card filterDiv vector ">
+                <div class="card filterDiv vector show">
                     <div class="pic"></div>
                     <div class="title">
                         <h3>2D Vinyl Design</h3>
                         <span>vector</span>
                     </div>
                 </div>
-                <div class="card filterDiv agency ">
+                <div class="card filterDiv agency show">
                     <div class="pic"></div>
                     <div class="title">
                         <h3>Creative Poster Design</h3>
                         <span>Agency</span>
                     </div>
                 </div>
-                <div class="card filterDiv portal ">
+                <div class="card filterDiv portal show">
                     <div class="pic"></div>
                     <div class="title">
                         <h3>Embosed Logo Design</h3>
                         <span>Portal</span>
                     </div>
                 </div>
-                <div class="card filterDiv vector">
+                <div class="card filterDiv vector show">
                     <div class="pic"></div>
                     <div class="title">
                         <h3>3D Helmet Design</h3>
                         <span>vector</span>
                     </div>
                 </div>
-                <div class="card filterDiv raster">
+                <div class="card filterDiv raster show">
                     <div class="pic"></div>
                     <div class="title">
                         <h3>2D Vinyl Design</h3>
@@ -376,28 +480,6 @@
         </div>
     </section>
 
-    <!-- last  section -->
-    <section class="last" id="last">
-        <div class="container">
-            <div class="cards">
-                <div class="card">
-                    <img src="./imgs/l1.png" alt="">
-                </div>
-                <div class="card">
-                    <img src="./imgs/l2.png" alt="">
-                </div>
-                <div class="card">
-                    <img src="./imgs/l3.png" alt="">
-                </div>
-                <div class="card">
-                    <img src="./imgs/l4.png" alt="">
-                </div>
-                <div class="card">
-                    <img src="./imgs/l5.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- contact  section -->
     <section class="contacts" id="contact">
@@ -429,6 +511,29 @@
                         <button type="submit">Send Message</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- last  section -->
+    <section class="last" id="last">
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <img src="./imgs/l1.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="./imgs/l2.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="./imgs/l3.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="./imgs/l4.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="./imgs/l5.png" alt="">
+                </div>
             </div>
         </div>
     </section>

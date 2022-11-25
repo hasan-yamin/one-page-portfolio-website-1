@@ -1,3 +1,28 @@
+/// Header ///
+let headerBtns: HTMLLIElement[] = <HTMLLIElement[]><unknown>document.querySelectorAll('#nav-bar ul li')
+headerBtns.forEach(btn => {
+    console.log(btn)
+    btn.addEventListener('click', function () {
+        // remove class active fromm last active
+        var current: HTMLLIElement[] = <HTMLLIElement[]><unknown>document.querySelectorAll('#nav-bar ul li.active')
+        current[0].classList.remove('active')
+        // add class active to current btn
+        btn.classList.add('active')
+    })
+})
+/// End Header ///
+
+/// about me ///
+let showAboutDetails: HTMLButtonElement = <HTMLButtonElement><unknown>document.getElementById('show-about-details')
+showAboutDetails.addEventListener('click', function () {
+    console.log('test')
+    let AboutDetails: HTMLDivElement = <HTMLDivElement><unknown>document.getElementById('about-full-details')
+    AboutDetails.style.display = 'block'
+})
+/// End About me ///
+
+
+
 let btns: HTMLSpanElement[] = <HTMLSpanElement[]><unknown>document.querySelectorAll('#myBtnContainer span')
 
 btns.forEach((btn) => {

@@ -28,14 +28,28 @@ header {
             ul {
                 display: inline-flex;
 
+
                 li {
                     margin: 5px;
                     font-size: 15px;
+
+                    &.active {
+                        a {
+                            color: $main_color;
+                        }
+                    }
 
                     @include breakpoint(xs) {
                         margin: 3px;
                         font-size: 12px;
                     }
+
+                    a {
+                        &:hover {
+                            color: $main_color;
+                        }
+                    }
+
                 }
 
 
