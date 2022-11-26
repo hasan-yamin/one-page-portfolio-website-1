@@ -1,8 +1,18 @@
 
 Single-Page  Personal Portfolio
 
-HTML
-Scss
-Typescript
+HTML - Scss - Typescript
+
+
+TypeScript is a language for application-scale JavaScript. 
+TypeScript adds optional types to JavaScript that support 
+tools for large-scale JavaScript applications for any browser, 
+for any host, on any OS. TypeScript compiles to readable, 
+standards-based JavaScript. Try it out at the playground.
+Installing
+
+For the latest stable version:
+
+npm install -g typescript
 
 https://github.com/hasan-yamin/
