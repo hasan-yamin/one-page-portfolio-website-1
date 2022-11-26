@@ -101,11 +101,14 @@ function show_feedbacks(feedbacks) {
 function changeCards() {
     const myTimeout = setTimeout(function () {
         // shift feedbacks array 1 element backward
-        feedbacks.push(feedbacks.shift());
-        // update feeds on screen
-        show_feedbacks(feedbacks);
-        changeCards();
-    }, 3000);
+        const lastEl = feedbacks.shift();
+        if (lastEl !== undefined) {
+            feedbacks.push(lastEl);
+            // update feeds on screen
+            show_feedbacks(feedbacks);
+            changeCards();
+        }
+    }, 5000);
 }
 // next and previous feeds
 let pervFeed = document.getElementById("prev-feed");
@@ -113,6 +116,7 @@ let nextFeed = document.getElementById("next-feed");
 // add event to next and previous buttons
 nextFeed.addEventListener('click', function () {
     // shift feedbacks array 1 element backward
+    //  clearTimeout(myTimeout);
     feedbacks.push(feedbacks.shift());
     // update feeds on screen
     show_feedbacks(feedbacks);
@@ -127,7 +131,7 @@ pervFeed.addEventListener('click', function () {
 // Initialize and add the map
 function initMap() {
     // The location of Uluru
-    const uluru = { lat: 24, lng: 130 };
+    const uluru = { lat: 40.75793094138562, lng: 29.93960213819318 };
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 4,

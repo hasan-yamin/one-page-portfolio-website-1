@@ -548,16 +548,17 @@ header {
           .feedback .container .feedbacks .feedback-cards {
             flex-direction: column; } }
         .feedback .container .feedbacks .feedback-cards .card {
-          display: flex;
-          flex-direction: row;
           padding: 25px;
           background-color: #FFF;
           box-shadow: 0px 0px 5px #F9F9FF; }
           .feedback .container .feedbacks .feedback-cards .card:hover {
             cursor: pointer; }
           .feedback .container .feedbacks .feedback-cards .card .pic {
-            width: 150px;
-            overflow: hidden; }
+            width: 50px;
+            overflow: hidden;
+            margin-right: 10px;
+            float: left;
+            height: 100%; }
             .feedback .container .feedbacks .feedback-cards .card .pic img {
               width: 50px;
               height: 50px;
@@ -637,8 +638,7 @@ header {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      background-color: #F9F9FF;
+      row-gap: 30px;
       margin-bottom: 100px; }
       .plans .container .plan-cards .card {
         display: flex;
@@ -646,7 +646,8 @@ header {
         justify-content: center;
         align-items: center;
         padding: 30px;
-        transition: all 0.3s ease 0s; }
+        transition: all 0.3s ease 0s;
+        background-color: #F9F9FF; }
         .plans .container .plan-cards .card:hover {
           background: linear-gradient(270deg, #63bcfc 0%, #8391ff 100%);
           transform: scale(1.05);
@@ -959,9 +960,18 @@ footer {
     gap: 50px;
     align-items: center; }
     .contacts .container .map {
-      width: 100%;
-      min-height: 400px;
+      width: 90%;
+      height: 600px;
       border: 1px solid; }
+      @media (max-width: 575px) {
+        .contacts .container .map {
+          height: 300px; } }
+      @media (min-width: 576px) and (max-width: 767px) {
+        .contacts .container .map {
+          height: 300px; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .contacts .container .map {
+          height: 400px; } }
     .contacts .container .contact {
       padding-top: 50px;
       display: flex;

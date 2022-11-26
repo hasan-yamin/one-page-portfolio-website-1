@@ -18,9 +18,19 @@
         align-items: center;
 
         .map {
-            width: 100%;
-            min-height: 400px;
+              width: 90%; 
+             height: 600px; 
             border: 1px solid;
+            @include breakpoint(xs) {
+                height:300px;
+            }
+
+            @include breakpoint(sm) {
+                height: 300px; 
+            }
+            @include breakpoint(md) {
+                height: 400px; 
+            }
         }
 
         .contact {
@@ -32,17 +42,13 @@
             @include breakpoint(xs) {
                 margin-top: 20px;
                 width: 80%;
-                flex-direction: column;
-                // align-items: center;
-                // justify-content: center;
+                flex-direction: column; 
             }
 
             @include breakpoint(sm) {
                 margin-top: 20px;
                 width: 80%;
-                flex-direction: column;
-                // align-items: center;
-                // justify-content: center;
+                flex-direction: column; 
             }
 
             .info {
