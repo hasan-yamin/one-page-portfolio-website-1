@@ -4,10 +4,11 @@
 @import '../helpers/media-queries';
 
 .home {
-    background-color: #F9F9FF;
+    background-color: $alt_color;
     min-height: 600px;
     display: flex;
     align-items: center;
+    padding-top: 80px;
 
     .container {
         display: flex;

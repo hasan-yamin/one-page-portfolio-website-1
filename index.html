@@ -115,53 +115,28 @@
                         <ul>
                             <li>
                                 <div>
-                                    <h3>Masters in Graphics & Fine Arts</h3>
-                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
-                                    <span>11-2022</span>
+                                    <h3>Master's degree in Electronics and Telecommunication Eng</h3>
+                                    <p>Result: 3.51 (In the Scale of 4.00)</p>
+                                    <span>2021 Jan </span>
                                 </div>
-                                
+
                             </li>
                             <li>
                                 <div>
-                                    <h3>Masters in Graphics & Fine Arts</h3>
-                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
-                                    <span>11-2022</span>
+                                    <h3>Bachelor's degree in Electronics and Telecommunication Eng</h3>
+                                    <p>Result: 90.70 (In the Scale of 100.00)</p>
+                                    <span>2015 Jan</span>
                                 </div>
-                                
+
                             </li>
                             <li>
                                 <div>
-                                    <h3>Masters in Graphics & Fine Arts</h3>
-                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
-                                    <span>11-2022</span>
+                                    <h3>Secondary School</h3>
+                                    <p>Result: 95.50 (In the Scale of 100.00)</p>
+                                    <span>2010 Jul</span>
                                 </div>
-                                
+
                             </li>
-                            <li>
-                                <div>
-                                    <h3>Masters in Graphics & Fine Arts</h3>
-                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
-                                    <span>11-2022</span>
-                                </div>
-                                
-                            </li>
-                            <li>
-                                <div>
-                                    <h3>Masters in Graphics & Fine Arts</h3>
-                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
-                                    <span>11-2022</span>
-                                </div>
-                                
-                            </li>
-                            <li>
-                                <div>
-                                    <h3>Masters in Graphics & Fine Arts</h3>
-                                    <p>Result: 3.78 (In the Scale of 4.00)</p>
-                                    <span>11-2022</span>
-                                </div>
-                                
-                            </li>
-                             
                         </ul>
                     </div>
                 </div>
@@ -296,7 +271,7 @@
                         <span>vector</span>
                     </div>
                 </div>
-                <div class="card filterDiv raster show">
+                <div class="card filterDiv raster show ">
                     <div class="pic"></div>
                     <div class="title">
                         <h3>2D Vinyl Design</h3>
@@ -317,7 +292,8 @@
                     person.</p>
             </div>
             <div class="feedbacks">
-                <div class="feedback-cards" id="feedback-cards">
+                <div class="feedback-cards" id="feedback-cards"
+                    style="transition: all 0.25s ease 0s; transform: translate3d(-1710px, 0px, 0px);">
                     <!-- cards will added using js -->
                     <!-- <div class="card">
                     <div class="pic"><img src="" alt=" "></div>
@@ -328,6 +304,7 @@
                         <span>CEO at Google</span>
                     </div>
                 </div> -->
+
                 </div>
                 <div class="arrows">
                     <div class="arrow" id="prev-feed"><i class="fa-solid fa-arrow-up"></i></div>
@@ -434,8 +411,8 @@
                         </div>
                         <div class="inf">
                             <div class="date">13th Dec</div>
-                            <div class="like">15</div>
-                            <div class="comments">04</div>
+                            <div class="like"><i class="fa-regular fa-heart"></i>15</div>
+                            <div class="comments"><i class="fa-regular fa-comment"></i>04</div>
                         </div>
                     </div>
                     <div class="crd-title">Break Through Self Doubt And Fear</div>
@@ -451,8 +428,8 @@
                         </div>
                         <div class="inf">
                             <div class="date">13th Dec</div>
-                            <div class="like">15</div>
-                            <div class="comments">04</div>
+                            <div class="like"><i class="fa-regular fa-heart"></i>15</div>
+                            <div class="comments"><i class="fa-regular fa-comment"></i>04</div>
                         </div>
                     </div>
                     <div class="crd-title">Break Through Self Doubt And Fear</div>
@@ -468,8 +445,8 @@
                         </div>
                         <div class="inf">
                             <div class="date">13th Dec</div>
-                            <div class="like">15</div>
-                            <div class="comments">04</div>
+                            <div class="like"><i class="fa-regular fa-heart"></i>15</div>
+                            <div class="comments"><i class="fa-regular fa-comment"></i>04</div>
                         </div>
                     </div>
                     <div class="crd-title">Break Through Self Doubt And Fear</div>
@@ -500,14 +477,15 @@
                         <p><a href="mailto:hasanyamin13@hotmail.com">hasanyamin13@hotmail.com</a></p>
                     </div>
                 </div>
-                <form>
+                <form method="POST"
+                    onsubmit="sendContactMsg({name:nam.value,email:mail.value,sub:subject.value,content:content.value})">
                     <div>
                         <input type="text" name="nam" placeholder="Enter Your Name">
                         <input type="email" name="mail" placeholder="Enter Email Address">
                         <input type="text" name="subject" placeholder="Enter Subject">
                     </div>
                     <div>
-                        <textarea name="" id="" cols="30" rows="3" placeholder="Enter Message"></textarea>
+                        <textarea name="content" id="" cols="30" rows="3" placeholder="Enter Message"></textarea>
                         <button type="submit">Send Message</button>
                     </div>
                 </form>
@@ -560,10 +538,10 @@
                     <h3>Follow Me</h3>
                     <p>Let us be social </p>
                     <div class="socials">
-                        <i class="fa-brands fa-github"></i>
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-youtube"></i>
-                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://github.com/hasan-yamin"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/hasanyameen13/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>

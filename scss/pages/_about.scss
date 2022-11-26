@@ -211,10 +211,19 @@
                             width: 50%;
                             padding: 0 40px;
 
+                            @include breakpoint(sm) {
+                                width: 100%;
+                            }
+
+                            @include breakpoint(xs) {
+                                width: 100%;
+                            }
+
                             >div {
-                                padding: 40px 40px;
-                                border: 1px solid;
+                                padding: 40px 40px; 
                                 width: fit-content;
+                                box-shadow: 0px 0px 15px #F9F9F9;
+
                             }
 
                             h3 {
@@ -222,6 +231,7 @@
                                 font-size: 20px;
                                 text-transform: capitalize;
                                 font-weight: 500;
+
                             }
 
                             p {
@@ -274,14 +284,38 @@
 
                                 >div {
                                     float: right;
+
+                                    @include breakpoint(sm) {
+                                        float: left;
+                                    }
+
+                                    @include breakpoint(xs) {
+                                        float: left;
+                                    }
                                 }
 
                                 &::before {
-                                    right: -15px
+                                    right: -15px;
+
+                                    @include breakpoint(sm) {
+                                        left: -15px;
+                                    }
+
+                                    @include breakpoint(xs) {
+                                        left: -15px;
+                                    }
                                 }
 
                                 &::after {
                                     right: -1px;
+
+                                    @include breakpoint(sm) {
+                                        left: -1px;
+                                    }
+
+                                    @include breakpoint(xs) {
+                                        left: -1px;
+                                    }
                                 }
                             }
                         }
