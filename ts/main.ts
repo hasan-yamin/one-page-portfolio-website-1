@@ -1,3 +1,28 @@
+/// Header ///
+let headerBtns: HTMLLIElement[] = <HTMLLIElement[]><unknown>document.querySelectorAll('#nav-bar ul li')
+headerBtns.forEach(btn => {
+    // console.log(btn)
+    btn.addEventListener('click', function () {
+        // remove class active fromm last active
+        var current: HTMLLIElement[] = <HTMLLIElement[]><unknown>document.querySelectorAll('#nav-bar ul li.active')
+        current[0].classList.remove('active')
+        // add class active to current btn
+        btn.classList.add('active')
+    })
+})
+/// End Header ///
+
+/// about me ///
+let showAboutDetails: HTMLButtonElement = <HTMLButtonElement><unknown>document.getElementById('show-about-details')
+showAboutDetails.addEventListener('click', function () {
+    console.log('test')
+    let AboutDetails: HTMLDivElement = <HTMLDivElement><unknown>document.getElementById('about-full-details')
+    AboutDetails.style.display = 'block'
+})
+/// End About me ///
+
+
+
 let btns: HTMLSpanElement[] = <HTMLSpanElement[]><unknown>document.querySelectorAll('#myBtnContainer span')
 
 btns.forEach((btn) => {
@@ -42,22 +67,22 @@ let feedbacks: {
     desc: string;
 }[] = [
         {
-            imgSrc: "../imgs/home1.png",
+            imgSrc: "../imgs/about1.png",
             position: "CEO at Google",
-            name: "Harriet Maxwell",
-            desc: "Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you."
+            name: "Hasan KY",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum labore nulla optio iure nemo quisquam, dolor deserunt beatae ipsum eligendi, quos voluptates, corrupti nobis excepturi? Reprehenderit ipsa accusamus quasi esse."
         },
         {
-            imgSrc: "../imgs/home1.png",
+            imgSrc: "../imgs/about1.png",
             position: "facebook",
-            name: "k Maxwell",
-            desc: "Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you."
+            name: "Osama A",
+            desc: " dolor sit amet Lorem ipsum, consectetur adipisicing elit. Eum labore nulla optio iure nemo quisquam, dolor deserunt beatae ipsum eligendi, quos voluptates, corrupti nobis excepturi? Reprehenderit ipsa accusamus quasi esse."
         },
         {
-            imgSrc: "../imgs/home1.png",
+            imgSrc: "../imgs/about1.png",
             position: "freelance",
-            name: "Hasan",
-            desc: "Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you."
+            name: "Ahmad KK",
+            desc: "consectetur adipisicing elit. Lorem ipsum dolor sit amet,  Eum labore nulla optio iure nemo quisquam, dolor deserunt beatae ipsum eligendi, quos voluptates, corrupti nobis excepturi? Reprehenderit ipsa accusamus quasi esse."
         }
     ]
 
@@ -119,7 +144,7 @@ pervFeed.addEventListener('click', function () {
 // Initialize and add the map
 function initMap(): void {
     // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.031 };
+    const uluru = { lat: 24, lng: 130 };
     // The map, centered at Uluru
     const map = new google.maps.Map(
         document.getElementById("map") as HTMLElement,
@@ -142,4 +167,16 @@ declare global {
     }
 }
 window.initMap = initMap;
+
+/// contact me ///
+function sendContactMsg(msg: { name: string, email: string, sub: string, content: string }) {
+    // msg.preventDefault
+    // send to data base
+    console.log('name: ' + msg.name)
+    console.log('email: ' + msg.email)
+    console.log('sub: ' + msg.sub)
+    console.log('content: ' + msg.content)
+}
+
+/// End contact me ///
 

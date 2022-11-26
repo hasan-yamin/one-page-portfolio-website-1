@@ -4,7 +4,7 @@
 @import '../helpers/media-queries';
 
 .blog-posts {
-    background-color: #F9F9FF;
+    background-color: $alt_color;
     min-height: 600px;
     display: flex;
     align-items: center;
@@ -67,7 +67,7 @@
                     cursor: pointer;
 
                     .crd-title {
-                        color: #8490FF;
+                        color: $main_color;
                     }
 
                     .pic {
@@ -139,11 +139,21 @@
                             font-size: 15px;
                             margin-right: 10px;
 
+                            svg {
+                                color: #000;
+                                margin-right: 5px;
+                            }
+
                         }
 
                         .comments {
                             color: rgba(68, 68, 68, 0.512);
                             font-size: 15px;
+
+                            svg {
+                                color: #000;
+                                margin-right: 5px;
+                            }
                         }
                     }
                 }

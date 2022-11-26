@@ -99,7 +99,7 @@ footer {
                     button {
                         width: 10%;
                         border: none;
-                        background-color: #8490FF;
+                        background-color: $main_color;
                         color: #fff;
                         cursor: pointer;
                     }
@@ -135,6 +135,17 @@ footer {
                 .socials {
                     display: flex;
                     justify-content: space-between;
+
+                    a {
+                        color: #fff;
+
+                        &:hover {
+                            color: $main_color;
+                        }
+                        svg{
+                            font-size: 18px;
+                        }
+                    }
                 }
             }
         }
