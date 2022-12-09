@@ -18,17 +18,23 @@
             <div class="logo">HKY</div>
             <nav class="nav-bar" id="nav-bar">
                 <ul>
-                    <li class="active"><a href="#home">Home</a> </li>
+                    <li><a class="active" href="#home">Home</a> </li>
                     <li><a href="#about">About</a> </li>
                     <li><a href="#services">Services</a> </li>
                     <li><a href="#projects">Portfolio</a> </li>
                     <li><a href="#plans">Prices</a> </li>
                     <li><a href="#blog-posts">Blog</a> </li>
-                    <!-- <li><a href="#">Pages</a> </li> -->
                     <li><a href="#contact">Contact</a> </li>
                 </ul>
 
             </nav>
+            <div class="media_button">
+                <button class="main_media_button" id="mediaButton" onclick="menu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
     <!-- main section -->
@@ -277,8 +283,6 @@
             </div>
         </div>
     </section>
-
-
     <!-- Feedback  section -->
     <section class="feedback " id="feedback">
         <div class="container">
@@ -473,8 +477,7 @@
                         <p><a href="mailto:hasanyamin13@hotmail.com">hasanyamin13@hotmail.com</a></p>
                     </div>
                 </div>
-                <form method="POST"
-                    onsubmit="sendContactMsg({name:nam.value,email:mail.value,sub:subject.value,content:content.value})">
+                <form id="contact-form">
                     <div>
                         <input type="text" name="nam" placeholder="Enter Your Name">
                         <input type="email" name="mail" placeholder="Enter Email Address">

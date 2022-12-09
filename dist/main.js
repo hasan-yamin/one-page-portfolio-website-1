@@ -1,16 +1,21 @@
 "use strict";
 /// Header ///
-let headerBtns = document.querySelectorAll('#nav-bar ul li');
+let headerBtns = document.querySelectorAll('#nav-bar ul li a');
+console.log(headerBtns);
+let navBar = document.getElementById('nav-bar');
 headerBtns.forEach(btn => {
-    // console.log(btn)
     btn.addEventListener('click', function () {
         // remove class active fromm last active
-        var current = document.querySelectorAll('#nav-bar ul li.active');
+        var current = document.querySelectorAll('#nav-bar ul li a.active');
         current[0].classList.remove('active');
         // add class active to current btn
         btn.classList.add('active');
+        navBar.classList.remove('show-list');
     });
 });
+function menu() {
+    navBar.classList.toggle('show-list');
+}
 /// End Header ///
 /// about me ///
 let showAboutDetails = document.getElementById('show-about-details');
@@ -19,7 +24,7 @@ showAboutDetails.addEventListener('click', function () {
     let AboutDetails = document.getElementById('about-full-details');
     AboutDetails.style.display = 'block';
 });
-/// End About me ///
+/// End About me /// 
 let btns = document.querySelectorAll('#myBtnContainer span');
 btns.forEach((btn) => {
     btn.addEventListener('click', function () {
@@ -145,13 +150,15 @@ function initMap() {
 }
 window.initMap = initMap;
 /// contact me ///
-function sendContactMsg(msg) {
-    // msg.preventDefault
-    // send to data base
-    console.log('name: ' + msg.name);
-    console.log('email: ' + msg.email);
-    console.log('sub: ' + msg.sub);
-    console.log('content: ' + msg.content);
-}
+let contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (e.target != null) {
+        console.log(e.target.mail.value.trim());
+        console.log(e.target.nam.value.trim());
+        console.log(e.target.subject.value.trim());
+        console.log(e.target.content.value.trim());
+    }
+});
 /// End contact me ///
 //# sourceMappingURL=main.js.map

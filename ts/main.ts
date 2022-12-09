@@ -1,15 +1,21 @@
 /// Header ///
-let headerBtns: HTMLLIElement[] = <HTMLLIElement[]><unknown>document.querySelectorAll('#nav-bar ul li')
+let headerBtns: HTMLLIElement[] = <HTMLLIElement[]><unknown>document.querySelectorAll('#nav-bar ul li a')
+console.log(headerBtns)
+let navBar: HTMLDivElement = <HTMLDivElement><unknown>document.getElementById('nav-bar')
+
 headerBtns.forEach(btn => {
-    // console.log(btn)
     btn.addEventListener('click', function () {
         // remove class active fromm last active
-        var current: HTMLLIElement[] = <HTMLLIElement[]><unknown>document.querySelectorAll('#nav-bar ul li.active')
+        var current: HTMLLIElement[] = <HTMLLIElement[]><unknown>document.querySelectorAll('#nav-bar ul li a.active')
         current[0].classList.remove('active')
         // add class active to current btn
         btn.classList.add('active')
+        navBar.classList.remove('show-list')
     })
 })
+function menu() {
+    navBar.classList.toggle('show-list')
+}
 /// End Header ///
 
 /// about me ///
@@ -19,10 +25,7 @@ showAboutDetails.addEventListener('click', function () {
     let AboutDetails: HTMLDivElement = <HTMLDivElement><unknown>document.getElementById('about-full-details')
     AboutDetails.style.display = 'block'
 })
-/// End About me ///
-
-
-
+/// End About me /// 
 let btns: HTMLSpanElement[] = <HTMLSpanElement[]><unknown>document.querySelectorAll('#myBtnContainer span')
 
 btns.forEach((btn) => {
@@ -110,9 +113,9 @@ function show_feedbacks(feedbacks: any[]) {
             break
     }
 }
- 
+
 function changeCards() {
-     const myTimeout = setTimeout(function () {
+    const myTimeout = setTimeout(function () {
         // shift feedbacks array 1 element backward
         const lastEl: {
             imgSrc: string;
@@ -130,7 +133,7 @@ function changeCards() {
     }, 5000)
 }
 
- // next and previous feeds
+// next and previous feeds
 let pervFeed: HTMLDivElement | null = <HTMLDivElement>document.getElementById("prev-feed");
 let nextFeed: HTMLDivElement | null = <HTMLDivElement>document.getElementById("next-feed");
 // add event to next and previous buttons
@@ -154,13 +157,13 @@ pervFeed.addEventListener('click', function () {
 // Initialize and add the map
 function initMap(): void {
     // The location of Uluru
-    const uluru = { lat: 40.75793094138562, lng:  29.93960213819318 };
+    const uluru = { lat: 40.75793094138562, lng: 29.93960213819318 };
     // The map, centered at Uluru
     const map = new google.maps.Map(
         document.getElementById("map") as HTMLElement,
         {
             zoom: 4,
-            center: uluru, 
+            center: uluru,
         }
     );
 
@@ -179,14 +182,16 @@ declare global {
 window.initMap = initMap;
 
 /// contact me ///
-function sendContactMsg(msg: { name: string, email: string, sub: string, content: string }) {
-    // msg.preventDefault
-    // send to data base
-    console.log('name: ' + msg.name)
-    console.log('email: ' + msg.email)
-    console.log('sub: ' + msg.sub)
-    console.log('content: ' + msg.content)
-}
+let contactForm: HTMLFormElement | null = <HTMLFormElement>document.getElementById('contact-form');
+contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (e.target != null) {
+        console.log(e.target.mail.value.trim())
+        console.log(e.target.nam.value.trim())
+        console.log(e.target.subject.value.trim())
+        console.log(e.target.content.value.trim())
+    }
 
+})
 /// End contact me ///
 
